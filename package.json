@@ -1,0 +1,44 @@
+{
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.0.2",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "rimraf packages/vue-air-datepicker/dist && pnpm run --filter vue-air-datepicker build && pnpm run --filter plugins build",
+    "prepublishOnly": "nr build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks",
+    "bumpp": "bumpp package.json packages/*/package.json",
+    "release": "nr bumpp && cd packages/vue-air-datepicker && pnpm release"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.16.1",
+    "@antfu/ni": "^0.21.12",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20.12.7",
+    "bumpp": "^9.4.0",
+    "eslint": "^9.2.0",
+    "eslint-plugin-format": "^0.1.1",
+    "lint-staged": "^15.2.2",
+    "pnpm": "^9.0.2",
+    "rimraf": "^5.0.5",
+    "simple-git-hooks": "^2.11.1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpm commitlint --edit ${1}"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

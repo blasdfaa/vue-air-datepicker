@@ -11,6 +11,7 @@
     "prepublishOnly": "nr build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "typecheck": "pnpm --filter vue-air-datepicker typecheck",
     "prepare": "simple-git-hooks",
     "bumpp": "bumpp package.json packages/*/package.json",
     "release": "nr bumpp && cd packages/vue-air-datepicker && pnpm release"

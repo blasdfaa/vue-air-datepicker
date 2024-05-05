@@ -1,4 +1,4 @@
-# pkg-placeholder
+# vue-air-datepicker
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -6,32 +6,47 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
 
-_description_
+Vue3 wrapper for [air-datepicker](https://github.com/t1m0n/air-datepicker)
 
-> **Note**:
-> Replace `pkg-placeholder`, `_description_` and `antfu` globally to use this template.
+## Install
 
-## Sponsors
+```bash
+npm i vue-air-datepicker
+```
 
-<p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg'/>
-  </a>
-</p>
+## Usage
+
+### Install the plugin
+
+```ts
+import { createApp } from 'vue'
+import { createAirDatepicker } from 'vue-air-datepicker'
+import App from './App.vue'
+
+const vad = createAirDatepicker()
+const app = createApp(App)
+
+app.use(vad)
+app.mount('#app')
+```
+
+### Init calendar
+
+You can initialize the calendar on a text field, as well as on a block or string element.
+
+```vue
+<script setup>
+import { useDatepicker } from 'vue-air-datepicker'
+
+useDatepicker('#datepicker')
+</script>
+
+<template>
+  <input id="datepicker" type="text">
+  <!-- OR <div id="datepicker"></div> -->
+</template>
+```
 
 ## License
 
-[MIT](./LICENSE) License © 2023-PRESENT [Anthony Fu](https://github.com/antfu)
-
-<!-- Badges -->
-
-[npm-version-src]: https://img.shields.io/npm/v/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/pkg-placeholder
-[npm-downloads-src]: https://img.shields.io/npm/dm/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/pkg-placeholder
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=pkg-placeholder
-[license-src]: https://img.shields.io/github/license/antfu/pkg-placeholder.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/pkg-placeholder/blob/main/LICENSE
-[jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/pkg-placeholder
+[MIT](./LICENSE) License © 2024-PRESENT [Zdorovtsev Viktor](https://github.com/blasdfaa)

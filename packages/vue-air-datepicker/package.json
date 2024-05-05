@@ -2,16 +2,15 @@
   "name": "vue-air-datepicker",
   "type": "module",
   "version": "0.0.1",
-  "description": "_description_",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "description": "Vue3 wrapper for Air datepicker",
+  "author": "Zdorovtsev Viktor",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/pkg-placeholder#readme",
+  "homepage": "https://github.com/blasdfaa/vue-air-datepicker#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/antfu/pkg-placeholder.git"
+    "url": "git+https://github.com/blasdfaa/vue-air-datepicker.git"
   },
-  "bugs": "https://github.com/antfu/pkg-placeholder/issues",
+  "bugs": "https://github.com/blasdfaa/vue-air-datepicker/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {

@@ -1,11 +1,5 @@
 # vue-air-datepicker
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![bundle][bundle-src]][bundle-href]
-[![JSDocs][jsdocs-src]][jsdocs-href]
-[![License][license-src]][license-href]
-
 Vue3 wrapper for [air-datepicker](https://github.com/t1m0n/air-datepicker)
 
 ## Install

@@ -51,8 +51,8 @@ importers:
         specifier: ^10.9.0
         version: 10.9.0(vue@3.4.26)
       air-datepicker:
-        specifier: ^3.5.0
-        version: 3.5.0
+        specifier: 3.5.3
+        version: 3.5.3
     devDependencies:
       typescript:
         specifier: ^5.4.5
@@ -1777,8 +1777,8 @@ packages:
     hasBin: true
     dev: true
 
-  /air-datepicker@3.5.0:
-    resolution: {integrity: sha512-WOpn1MaSl5drcXSwkXg5Gh/jXX/VFfamNnIb8E43AY4UKuW/bNEW06e3GGsiWLDBQLabD22L6b6cP7KHnAy54w==}
+  /air-datepicker@3.5.3:
+    resolution: {integrity: sha512-Elf9gLhv/jidN1+TfeRJYMQRUfYx5apXw2dY5DuAMPRnNtQ4Iw9fTTJK772osmXSUB9xQ2Y8Q1Pt6pgBOQLPQw==}
     dev: false
 
   /ajv@6.12.6:

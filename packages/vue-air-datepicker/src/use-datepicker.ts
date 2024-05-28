@@ -12,6 +12,9 @@ export function useDatepicker(
   let datepicker: AirDatepicker<HTMLElement> | undefined
 
   function init() {
+    if (datepicker?.isDestroyed)
+      return
+
     const target = (typeof el === 'string' ? el : unrefElement(el))
     if (!target || datepicker !== undefined)
       return

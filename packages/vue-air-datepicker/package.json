@@ -1,7 +1,7 @@
 {
   "name": "vue-air-datepicker",
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Vue3 wrapper for Air datepicker",
   "author": "Zdorovtsev Viktor",
   "license": "MIT",
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.9.0",
-    "air-datepicker": "^3.5.0"
+    "air-datepicker": "3.5.3"
   },
   "devDependencies": {
     "typescript": "^5.4.5",

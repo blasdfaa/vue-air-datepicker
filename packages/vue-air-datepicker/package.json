@@ -43,7 +43,8 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.9.0",
-    "air-datepicker": "3.5.3"
+    "air-datepicker": "3.5.3",
+    "vue-demi": ">=0.14.8"
   },
   "devDependencies": {
     "typescript": "^5.4.5",

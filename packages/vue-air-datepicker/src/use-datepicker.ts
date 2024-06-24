@@ -2,6 +2,7 @@ import type { MaybeRefOrGetter } from '@vueuse/core'
 import { tryOnMounted, tryOnUnmounted, unrefElement } from '@vueuse/core'
 import type { AirDatepickerOptions } from 'air-datepicker'
 import AirDatepicker from 'air-datepicker'
+import { ref } from 'vue-demi'
 
 type UserDatepickerOptions = AirDatepickerOptions<HTMLElement>
 
@@ -9,24 +10,26 @@ export function useDatepicker(
   el: MaybeRefOrGetter<HTMLElement | null | undefined> | string,
   options: UserDatepickerOptions = {},
 ) {
-  let datepicker: AirDatepicker<HTMLElement> | undefined
+  const datepicker = ref<AirDatepicker<HTMLElement>>()
 
   function init() {
-    if (datepicker?.isDestroyed)
+    if (datepicker.value?.isDestroyed)
       return
 
     const target = (typeof el === 'string' ? el : unrefElement(el))
-    if (!target || datepicker !== undefined)
+    if (!target || datepicker.value !== undefined)
       return
 
-    datepicker = new AirDatepicker(target, options)
+    datepicker.value = new AirDatepicker(target, options)
   }
 
   function destroy() {
-    datepicker?.destroy()
-    datepicker = undefined
+    datepicker.value?.destroy()
+    datepicker.value = undefined
   }
 
   tryOnMounted(init)
   tryOnUnmounted(destroy)
+
+  return datepicker
 }

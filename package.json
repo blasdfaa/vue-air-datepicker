@@ -7,14 +7,14 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "rimraf packages/vue-air-datepicker/dist && pnpm run --filter vue-air-datepicker build && pnpm run --filter plugins build",
+    "build": "pnpm run --filter vue-air-datepicker build && pnpm run --filter plugins build",
     "prepublishOnly": "nr build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "pnpm --filter vue-air-datepicker typecheck",
     "prepare": "simple-git-hooks",
     "bumpp": "bumpp package.json packages/*/package.json",
-    "release": "nr bumpp && cd packages/vue-air-datepicker && pnpm release"
+    "release": "cd packages/vue-air-datepicker && pnpm release"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.1",

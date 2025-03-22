@@ -16,6 +16,9 @@
     "bumpp": "bumpp package.json packages/*/package.json",
     "release": "cd packages/vue-air-datepicker && pnpm release"
   },
+  "dependencies": {
+    "@vueuse/core": "13.0.0"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.1",
     "@antfu/ni": "^0.21.12",

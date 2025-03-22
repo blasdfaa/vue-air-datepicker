@@ -42,13 +42,13 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "@vueuse/core": "^10.9.0",
+    "@vueuse/core": "13.0.0",
     "air-datepicker": "3.5.3",
-    "vue-demi": ">=0.14.8"
+    "vue-demi": ">=0.14.10"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "unbuild": "^2.0.0",
-    "vue-tsc": "^2.0.16"
+    "typescript": "5.8.2",
+    "unbuild": "3.5.0",
+    "vue-tsc": "2.2.8"
   }
 }
